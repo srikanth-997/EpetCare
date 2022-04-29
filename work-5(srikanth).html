@@ -1,0 +1,149 @@
+
+
+<!DOCTYPE html>
+<html>
+<head>
+
+	
+	<link rel="stylesheet" type="text/css" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.1/css/all.min.css">
+	<link rel="stylesheet" type="text/css" href="styles.css">
+	<style type="text/css">
+		
+		body{
+	margin: 0;
+	padding: 0;
+	font-family: "Roboto",san-serif;
+      }
+header{
+position: fixed;
+background: #5779FD;
+padding: 20px;
+width: 100%;
+height: 30px;
+
+
+}
+.Left-area h3{
+	color: white;
+	margin:0;
+	font-size: 22px;
+	font-weight: 900;
+
+}
+.sidebar{
+	background: #2F323A;
+	margin-top: -20px;
+	padding-top: 30px;
+	position: fixed;
+	left: 0;
+	width: 250px;
+	height: 100%;
+}
+.sidebar .profile_image{
+	width: 100px;
+	height: 100px;
+	border-radius: 100px;
+	margin-bottom: 10px;
+}
+.sidebar h4{
+	color: #ccc;
+	margin-top: 0;
+	margin-bottom: 1px;
+}
+.sidebar a{
+	color: #fff;
+	display: block;
+	width: 100%;
+	line-height: 40px;
+	text-decoration: none;
+	padding-left: 10px;
+	box-sizing: border-box;
+}
+.sidebar a:hover{
+	background: #198303;
+
+}
+.sidebar i{
+	padding-right: 10px;
+
+
+
+}
+
+label #sidebar_btn{
+	z-index: 1;
+	color: #fff;
+	position: fixed;
+	cursor: pointer;
+	left: 300px;
+	font-size: 20px;
+	margin: 5px 0;
+	transition: 0.5s;
+	transition-property: color;
+}
+label #sidebar_btn:hover{
+	color: #19B303;
+}
+#check:checked ~ .sidebar{
+	left:-230px;
+}
+#id1,#id2{
+	color:white;
+}
+#id1:hover{
+	color:red;
+}
+#id2:hover{
+	color:red;
+}
+.hd1{
+	margin: 10px;
+}
+
+	</style>
+</head>
+<body background="rj9.jpg" >
+	<input type="checkbox" id="check" aria-hidden="true">
+	<header style="margin-top: -20px;">
+		<label for="check">
+			<i class="fa fa-align-justify" aria-hidden="true" id="sidebar_btn"></i>
+			
+
+		</label>
+		
+        <div style="float: right;margin-right: 234px;margin-top: 8px;">
+        <a href="#"><i class="fa fa-bell" aria-hidden="true" id="id1"></i></a>
+        
+        </div>
+        <div style="float: right;margin-right: -80px;margin-top: 8px;><a href="#"><i class="fa fa-envelope" aria-hidden="true" id="id2"></i></a>
+        </div>
+
+    </header>
+    <div class="sidebar">
+    	<div style="background-color:#5779FD;color: white;margin-top: -52px;margin-bottom: 60px;height: 72px;text-align: center;float: center; ">
+    		<h2 style="text-align: center;">AdminLTE</h2>
+    	</div>
+    	
+    	<center>
+    		<img src="srikanth.jpg" class="profile_image" height="100px";>
+    		<h4 >Srikanth</h4><br>
+    		<input type="text" placeholder="Search.." name="search">
+            <button type="submit"><i class="fa fa-search"></i></button>
+
+    	</center><br>
+  
+    	<a href="#"><i class="fa fa-th-large" aria-hidden="true"></i><h4>Widgets</h4></a>
+    	<a href="#"><i class="fa fa-calendar" aria-hidden="true"></i><h4>Calender</h4></a>
+    	<a href="#"><i class="fa fa-table" aria-hidden="true"></i><h4>Tables</h4></a>
+        <a href="#"><i class="fa fa-envelope" aria-hidden="true"></i><h4>Mailbox</h4></a>
+    	<a href="#"><i class="fa fa-book" aria-hidden="true"></i><h4>Documentation</h4></a>
+
+    	
+
+
+    </div>
+
+</body>
+
+
+</html>

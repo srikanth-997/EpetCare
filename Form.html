@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>RojeWorld Registration Form</title>
+	 <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+</head>
+<body>
+	
+	<div class="container align-center form-group"  >
+		
+		<form id="registration_form" class="form-group" style="text-align: center; background-color: #D4DAD7;">
+			<h1 style="text-align: center;">Rojeworld Registration Form</h1>
+			<table cellspacing="30px;" style="padding-left: 520px;">
+				<tr>
+					<td>
+					<label>
+					 Name
+				    </label>
+				    </td>
+				    <td><input type="text" name="n1" id="name" required=""></td>
+				    
+				</tr>
+				
+				<tr>
+					<td><label>Email ID</label></td>
+					<td><input type="email" name="" id="email" required=""></td>
+				</tr>
+				<tr>
+					<td><label>Password</label></td>
+					<td><input type="password" name="" id="password" required=""></td>
+				   
+				</tr>
+				<tr>
+					<td><label>Re-Enter Password</label></td>
+					<td><input type="password" name="" id="confirm_password" required=""></td>
+				    
+				</tr>
+				
+				<tr>
+					<td><label >Phone</label></td>
+					<td><input type="text" name="" id="Phone" required=""></td>
+				</tr>
+				<tr>
+					<td><label>Address</label></td>
+					<td><input type="text" class="form-control" id="Address" placeholder="1234 Main St"></td>
+				    
+				</tr>
+				
+			</table>
+			<input type="submit" value="submit" name="" id="submit"> 
+			
+		</form>
+		
+	</div>
+	<script type="text/javascript">
+		$(document).ready(function(){
+        $("#id1").click(function(){
+        alert("Are you sure to submit");
+        });
+        
+        $("#name").focus(function(){
+        $(this).css("background-color", "#CBCFCD");
+        });
+        $("#email").blur(function(){
+        $(this).css("background-color", "orange");
+        });
+        $("#confirm_password").on("click", function(){
+        alert("Plz match with the password");
+        });
+        $("#Phone").keydown(function(){
+        $("#Phone").css("background-color", "yellow");
+         });
+        $("#Phone").keyup(function(){
+        $("#Phone").css("background-color", "pink");
+        });
+        $("form").submit(function(){
+        alert("Submitted");
+        });
+        $("#Address").change(function(){
+        alert("The text has been changed.");
+        });
+
+       });
+	</script>
+
+	
+</body>
+</html>

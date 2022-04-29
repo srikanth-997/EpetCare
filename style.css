@@ -1,0 +1,248 @@
+
+
+
+
+.container-fluid{
+background-color: #65c178 !important; 
+height: 60px;
+position: relative;
+
+}
+.container-fluid1{
+background-color: #333333; 
+height: 60px;
+position: relative;
+
+}
+ Ul li{
+	list-style:none;
+	
+	color: white;
+	padding: 10px;
+	display: inline-block;
+}
+.breadcrumb1{
+	padding: 8px 15px;
+	margin-bottom: 20px;
+	list-style: none;
+}
+
+.breadcrumb1 > li + li:before {
+	content:"| ";
+}
+.icons
+{
+	display: inline-block;
+
+}
+.icons :hover{
+	background-color: black;
+	border-radius: 900px;
+
+}
+
+ .affix {
+    top: 0;
+    width: 100%;
+    z-index: 9999 !important;
+  }
+
+  .affix + .container-fluid {
+    padding-top: 70px;
+  }
+  .navbar{
+  	background-color: #ffff;
+  	height: 100px;
+  	padding: -19px;
+
+  }
+  .dropdown:hover>.dropdown-menu{
+  	display: block;
+  }
+  
+      nav ul { 
+            margin: 0 10%; 
+            padding: 10px 0px 10px 100px; 
+            display: flex; 
+            
+        } 
+  
+         nav ul li { 
+            list-style: none; 
+            padding: 10px 20px; 
+  
+        } 
+  
+         nav ul li a { 
+            text-decoration: none; 
+            font-size: 14px; 
+            font-weight: bold; 
+            color: black; 
+            position: relative; 
+  
+        } 
+  
+        nav ul li a::before { 
+            content: ""; 
+            width: 0px; 
+            height: 10px; 
+            background: black; 
+            position: absolute; 
+            top: 100%; 
+            left: 0; 
+            transition: .5s; 
+        } 
+  
+       nav  ul li a:hover::before { 
+            width: 50%; 
+            transform: translateX(100%); 
+        } 
+ 
+.banner{
+	-webkit-background-size:cover;
+	background-size: cover;
+	background-position:  center center;
+	background-repeat: no-repeat;
+	height: 100vh;
+}
+#id1{
+	-webkit-background-size:cover;
+	background-size: cover;
+	background-position:  center center;
+	background-repeat: no-repeat;
+	height: 100vh;
+}
+#id2{
+	margin-left: 80px;
+	font-family: copper;
+	text-align: center;
+
+}
+.parallax{
+	background: url('2a.jpg') no-repeat center;
+	background-size: cover;
+	background-attachment: fixed;
+	height: 300px;
+}
+#id3{
+	color: white;
+	font-family: copper;
+	padding-top: 180px;
+	font-size: 40px;
+}
+#id4{
+	height: 100px; 
+}
+
+#id5{
+	color: white;
+	font-family: copper ;
+	padding-top: 10px;
+	text-align: center;
+}
+.button {
+  
+  border-radius: 40px;
+  border: none;
+  padding-top: 10px;
+  padding: 20px;
+  text-align: center;
+  text-decoration: none;
+  display: inline-block;
+  font-size: 16px;
+  margin: 16px 2px;
+}
+.button :hover{
+	color: #B8BEBB;
+}
+.icon-inner span{
+  width: 120px;
+  height: 120px;
+  line-height: 120px;
+  text-align: center;
+  background-color: #40E09C;
+  display: inline-block;
+  border-radius: 50%;
+  color: white;
+}
+.icon-inner span:before{
+  margin-top: 30px;
+  margin-left: 0;
+  font-size: 60px;
+}
+.icon-inner1 span{
+  width: 120px;
+  height: 120px;
+ 
+  text-align: center;
+  color: green;
+}
+.icon-inner1 span:before{
+  margin-top: 30px;
+  margin-left: 0;
+  font-size: 60px;
+}
+.parallax1{
+  background: url('bg/bg6.jpg') no-repeat center;
+  background-size: cover;
+  background-attachment: fixed;
+  height: 300px;
+}
+#id6{
+  color: green;
+  font-family: copper;
+  padding-top: 60px;
+  padding-left: 520px;
+  font-size: 40px;
+  align-items: center;
+  margin-bottom: -10px;
+  z-index: 10;
+
+}
+#id7{
+  
+ 
+  padding-left: 370px;
+  text-decoration: none;
+   z-index: 1;
+}
+.color-overlay{
+  
+  height: 100%;
+  background: white;
+  opacity: .7;
+  position: relative;
+}
+.color-overlay1{
+  
+  height: 100%;
+  background: white;
+  opacity: .6;
+  position: relative;
+}
+a{
+  z-index: 1;
+}
+.anchor :hover{
+  color: green;
+
+}
+.parallax2{
+  background: url('bg/bg6.jpg') no-repeat center;
+  background-size: cover;
+  background-attachment: fixed;
+  height: 300px;
+}
+.parallax3{
+  background: url('bg/bg6.jpg') no-repeat center;
+  background-size: cover;
+  background-attachment: fixed;
+  height: 450px;
+}
+.list-group-item-mine {
+  background-color: black;
+ 
+ 
+}
+
+

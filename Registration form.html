@@ -1,0 +1,319 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>RojeWorld Registration Form</title>
+	<script type="text/javascript" src="https://code.jquery.com/jquery-3.5.1.js"></script>
+</head>
+<body>
+	<div class="container align-center form-group">
+		
+		<form id="registration_form" class="form-group" style="text-align: center; background-color: #D4DAD7;">
+			<h1 style="text-align: center;">Rojeworld Registration Form</h1>
+			<table cellspacing="30px;" style="padding-left: 520px;">
+				<tr>
+					<td>
+					<label>
+					First Name
+				    </label>
+				    </td>
+				    <td><input type="text" name="n1" id="form_fname" required=""></td>
+				    <td><span class="error_form" id="fname_error_message"></span></td>
+				</tr>
+				<tr>
+					<td><label>Middle Name</label></td>
+					<td><input type="text" name=""  required=""></td>
+					
+				</tr>
+				<tr>
+					<td><label>Last Name</label></td>
+					<td><input type="text" name="" id="form_lname" required=""></td>
+					<td><span class="error_form" id="lname_error_message"></span></td>
+				</tr>
+				<tr>
+					<td><label>Email ID</label></td>
+					<td><input type="email" name="" id="form_email" required=""></td>
+				    <td><span class="error_form" id="email_error_message"></span></td>
+				</tr>
+				<tr>
+					<td><label >Phone</label></td>
+					<td><input type="text" name="" id="form_phone" required=""></td>
+					<td><span class="error_form" id="phone_error_message"></span></td>
+				</tr>
+				<tr>
+					<td><label>Password</label></td>
+					<td><input type="password" name="" id="form_password" required=""></td>
+				    <td><span class="error_form" id="password_error_message"></span></td>
+				</tr>
+				<tr>
+					<td><label>Re-Enter Password</label></td>
+					<td><input type="password" name="" id="form_retype_password" required=""></td>
+				    <td><span class="error_form" id="retype_password_error_message"></span></td>
+				</tr>
+				<tr>
+					<td><label>Address</label></td>
+					<td><input type="text" class="form-control" id="form_address" placeholder="1234 Main St"></td>
+				    <td><span class="error_form" id="address_error_message"></span></td>
+				</tr>
+				
+				
+			</table>
+			<button style="background-color: green;color: white" type="submit" value="Register" name="">Register</button> 
+			
+		</form>
+		
+	</div>
+	<script type="text/javascript">
+		$(function(){
+			$("#fname_error_message").hide();
+			$("#lname_error_message").hide();
+			$("#email_error_message").hide();
+			$("#phone_error_message").hide();
+
+			$("#address_error_message").hide();
+			$("#password_error_message").hide();
+			$("#retype_password_error_message").hide();
+			$("#message_error_message").hide();
+
+
+			var error_fname = false;
+			var error_lname = false;
+			var error_email = false;
+			var error_phone = false;
+			var error_address = false;
+			var error_password = false;
+			var error_retype_password = false;
+			var error_message = false;
+			
+
+			$("#form_fname").focusout(function()
+			{ 
+				check_fname();
+				});
+			$("#form_lname").focusout(function()
+			{ 
+				check_lname();
+				});
+			$("#form_email").focusout(function()
+			{ 
+				check_email();
+				});
+			$("#form_phone").focusout(function()
+			{ 
+				check_phone();
+				});
+			$("#form_address").focusout(function()
+			{ 
+				check_address();
+				});
+			$("#form_password").focusout(function()
+			{ 
+				check_password();
+				});
+			$("#form_retype_password").focusout(function()
+			{ 
+				check_retype_password();
+				});
+			$("#form_message").focusout(function()
+			{ 
+				check_message();
+				});
+
+			function check_fname()
+			{
+				var pattern = /^[a-zA-Z]*$/;
+				var fname = $("#form_fname").val();
+				if (pattern.test(fname) && fname !== '') {
+					$("#fname_error_message").hide();
+					$("#form_fname").css("border-bottom" , "2px solid #34F458");
+				}else{
+					$("#fname_error_message").html("should contains only characters");
+					$("#fname_error_message").show();
+					$("#form_fname").css("border-bottom" , "2px solid #F90A0A");
+					error_form = true;
+				}
+
+				var firstname_length = $("#form_fname").val().length;
+				if (firstname_length < 2) {
+
+					$("#fname_error_message").html("min 2 characters needed");
+					$("#fname_error_message").show();
+					$("#fname_error_message").css("border-bottom" , "2px solid #F90A0A");
+					error_fname = true;
+				}else
+				{
+					$("#fname_error_message").hide();
+					$("#form_fname").css("border-bottom" , "2px solid #34F458");
+				}
+			}
+
+			function check_lname()
+			{
+				var pattern = /^[a-zA-Z]*$/;
+				var lname = $("#form_lname").val();
+				if (pattern.test(lname) && lname !== '') {
+					$("#lname_error_message").hide();
+					$("#form_lname").css("border-bottom" , "2px solid #34F458");
+				}else{
+					$("#lname_error_message").html("should contains only characters");
+					$("#lname_error_message").show();
+					$("#form_lname").css("border-bottom" , "2px solid #F90A0A");
+					error_lname = true;
+				}
+
+				var lastname_length = $("#form_lname").val().length;
+				if (lastname_length < 2) {
+
+					$("#lname_error_message").html("min 2 characters needed");
+					$("#lname_error_message").show();
+					$("#lname_error_message").css("border-bottom" , "2px solid #F90A0A");
+					error_lname = true;
+				}else
+				{
+					$("#lname_error_message").hide();
+					$("#form_lname").css("border-bottom" , "2px solid #34F458");
+				}
+
+			}
+			function check_phone()
+			{
+				var phone_length = $("#form_phone").val().length;
+				if (phone_length < 10) {
+
+					$("#phone_error_message").html("phone number must be 10 digits ");
+					$("#phone_error_message").show();
+					$("#form_phone").css("border-bottom" , "2px solid #F90A0A");
+					error_password = true;
+				}else
+				{
+					$("#phone_error_message").hide();
+					$("#form_phone").css("border-bottom" , "2px solid #34F458");
+				}
+			}
+
+			function check_password()
+			{
+				var password_length = $("#form_password").val().length;
+				if (password_length < 8) {
+
+					$("#password_error_message").html("Atlease 8 characters atleast one uppercase character one num and symbol ");
+					$("#password_error_message").show();
+					$("#form_password").css("border-bottom" , "2px solid #F90A0A");
+					error_password = true;
+				}else
+				{
+					$("#password_error_message").hide();
+					$("#form_password").css("border-bottom" , "2px solid #34F458");
+				}
+			}
+			
+
+			function check_retype_password()
+			{
+				var password = $("#form_password").val();
+				var retype_password = $("#form_retype_password").val();
+
+				if (password !== retype_password) {
+
+					$("#retype_password_error_message").html("Passwords did not match");
+					$("#retype_password_error_message").show();
+					$("#form_retype_password").css("border-bottom" , "2px solid #F90A0A");
+                    error_retype_password = true;
+
+				}
+				else
+				{
+					$("#retype_password_error_message").hide();
+					$("#form_retype_password").css("border-bottom" , "2px solid #34F458");
+				}
+			}
+
+			function check_email()
+			{
+				var pattern = /^([\w-\.]+@([\w-]+\.)+[\w-]{2,4})?$/;
+				var email = $("#form_email").val();
+				if (pattern.test(email) && email !== '') {
+					$("#email_error_message").hide();
+					$("#form_email").css("border-bottom" , "2px solid #34F458");
+				}else{
+					$("#email_error_message").html("Invalid Email");
+					$("#email_error_message").show();
+					$("#form_email").css("border-bottom" , "2px solid #F90A0A");
+					error_email = true;
+				}
+
+			}
+			function check_address()
+			{
+
+				var address_length = $("#form_address").val().length;
+				if ( address_length < 20) {
+
+					$("#address_error_message").html("min 20 characters needed");
+					$("#address_error_message").show();
+					
+					error_lname = true;
+				}else
+				{
+					$("#address_error_message").hide();
+					$("#form_address").css("border-bottom" , "2px solid #34F458");
+				}
+
+			}
+			function check_message()
+			{
+
+				var message_length = $("#form_message").val().length;
+				if ( message_length < 20) {
+
+					$("#message_error_message").html("min 100 characters needed");
+					$("#message_error_message").show();
+					
+					error_lname = true;
+				}else
+				{
+					$("#message_error_message").hide();
+					$("#form_message").css("border-bottom" , "2px solid #34F458");
+				}
+
+			}
+
+			$("#registration_form").submit(function(){
+
+				error_fname = false;
+				error_lname = false;
+				error_email = false;
+				error_password = false;
+				error_address= false;
+				error_retype_password = false;
+				error_message = false;
+
+				check_fname();
+				check_lname();
+				check_email();
+				check_password();
+				check_retype_password();
+				check_message();
+
+				if (error_fname === false && error_lname === false && error_email === false && error_password === false && error_retype_password === false && error_address === false && error_message === false) {
+					alert("Registration successfull");
+					
+					return true;
+				}else{
+					alert("Please fill the form correctly");
+					return false;
+
+				}
+
+
+
+			});
+
+
+			
+			
+
+		});
+	</script>
+
+</body>
+</html>
